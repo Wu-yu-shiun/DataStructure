@@ -36,7 +36,7 @@ int dequeue(struct Queue* queue){
 }
 
 void display(struct Queue queue){
-    int index=queue.front+1;
+    int index=(queue.front+1)%queue.size;
     while(index!=(queue.rear+1)%queue.size){
         printf("%d ",queue.container[index]);
         index=(index+1)%queue.size;
